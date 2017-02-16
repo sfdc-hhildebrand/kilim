@@ -297,7 +297,7 @@ case 1:
 
 	if ( _http_parser_trans_actions[_trans] != 0 ) {
 		_acts = _http_parser_trans_actions[_trans];
-		_nacts = (int) _http_parser_actions[_acts++];
+		_nacts = _http_parser_actions[_acts++];
 		while ( _nacts-- > 0 )
 	{
 			switch ( _http_parser_actions[_acts++] )
@@ -1000,7 +1000,7 @@ static final int http_keywords_en_main = 307;
 	}
 case 1:
 	_acts = _http_keywords_from_state_actions[cs];
-	_nacts = (int) _http_keywords_actions[_acts++];
+	_nacts = _http_keywords_actions[_acts++];
 	while ( _nacts-- > 0 ) {
 		switch ( _http_keywords_actions[_acts++] ) {
 	case 1:
@@ -1065,7 +1065,7 @@ case 3:
 
 	if ( _http_keywords_trans_actions[_trans] != 0 ) {
 		_acts = _http_keywords_trans_actions[_trans];
-		_nacts = (int) _http_keywords_actions[_acts++];
+		_nacts = _http_keywords_actions[_acts++];
 		while ( _nacts-- > 0 )
 	{
 			switch ( _http_keywords_actions[_acts++] )
@@ -1273,7 +1273,7 @@ case 3:
 
 case 2:
 	_acts = _http_keywords_to_state_actions[cs];
-	_nacts = (int) _http_keywords_actions[_acts++];
+	_nacts = _http_keywords_actions[_acts++];
 	while ( _nacts-- > 0 ) {
 		switch ( _http_keywords_actions[_acts++] ) {
 	case 0:
@@ -1587,7 +1587,7 @@ case 1:
 
 	if ( _http_date_trans_actions[_trans] != 0 ) {
 		_acts = _http_date_trans_actions[_trans];
-		_nacts = (int) _http_date_actions[_acts++];
+		_nacts = _http_date_actions[_acts++];
 		while ( _nacts-- > 0 )
 	{
 			switch ( _http_date_actions[_acts++] )

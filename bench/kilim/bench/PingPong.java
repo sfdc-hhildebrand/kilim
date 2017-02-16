@@ -37,6 +37,7 @@ class Ping extends Task {
         pongmb = pong;
     }
     
+    @Override
     public void execute() throws Pausable {
         while (true) {
             Msg m = mymb.get();
@@ -62,6 +63,8 @@ class Ping extends Task {
                         System.exit(0);
                     }
                     break;
+            default:
+                throw new IllegalStateException(String.format("Invalid type %s", m.type));
             }
         }
     }
@@ -73,6 +76,7 @@ class Pong extends Task {
         mymb = mb;
     }
     
+    @Override
     public void execute() throws Pausable {
         while (true) {
             Msg m = mymb.get();
@@ -83,6 +87,8 @@ class Pong extends Task {
                     m.type = MsgType.PongMsg;
                     m.mb.put(m);
                     break;
+                default:
+                    throw new IllegalStateException(String.format("Invalid type %s", m.type));
             }
         }
     }
@@ -98,6 +104,7 @@ class Msg {
     Msg(MsgType t, int c, Mailbox<Msg> amb) {type = t; mb = amb; count = c;}
     Msg(MsgType t, Mailbox<Msg> amb) {type = t; mb = amb;}
     
+    @Override
     public String toString() {
         return "" + System.identityHashCode(this) + " " + type;
     }

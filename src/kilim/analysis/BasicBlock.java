@@ -1150,7 +1150,7 @@ public class BasicBlock implements Comparable<BasicBlock> {
     }
 
     public AbstractInsnNode getInstruction(int pos) {
-        return (AbstractInsnNode) flow.instructions.get(pos);
+        return flow.instructions.get(pos);
     }
 
     public boolean flowVarUsage() {

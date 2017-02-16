@@ -18,7 +18,7 @@ class ExInts {
             return -1;
         } else {
             char c = '\u33d3';
-            return (int)c;
+            return c;
         }
     }
     int bits(int i, int j) {
@@ -45,7 +45,7 @@ class ExLongs {
             return -1;
         } else {
             char c = '\u33d3';
-            return (long)c;
+            return c;
         }
     }
     long bits(long i, long j) {
@@ -74,7 +74,7 @@ class ExDoubles {
             return -1;
         } else {
             char c = '\u33d3';
-            return (double)c;
+            return c;
         }
     }
 }
@@ -98,7 +98,7 @@ class ExFloats {
             return -1;
         } else {
             char c = '\u33d3';
-            return (float)c;
+            return c;
         }
     }
 }
