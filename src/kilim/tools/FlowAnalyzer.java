@@ -188,7 +188,7 @@ public class FlowAnalyzer {
         try {
             Enumeration<JarEntry> e = new JarFile(jarFile).entries();
             while (e.hasMoreElements()) {
-                ZipEntry en = (ZipEntry) e.nextElement();
+                ZipEntry en = e.nextElement();
                 String n = en.getName();
                 if (!n.endsWith(".class")) continue;
                 n = n.substring(0, n.length() - 6).replace('/','.');

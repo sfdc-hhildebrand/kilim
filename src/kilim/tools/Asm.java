@@ -615,15 +615,15 @@ public class Asm {
         } else {
             if (s.indexOf('.') == -1) {
                 if (isDoubleWord) {
-                    ret = (Long)parseLong(s);
+                    ret = parseLong(s);
                 } else {
-                    ret = (Integer) parseInt(s);
+                    ret = parseInt(s);
                 }
             } else {
                 if (isDoubleWord) {
-                    ret = (Double)parseDouble(s); 
+                    ret = parseDouble(s); 
                 } else {
-                    ret = (Float)parseFloat(s);
+                    ret = parseFloat(s);
                 }
             }
         }
